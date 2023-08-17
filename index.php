@@ -7,31 +7,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!--//hace que el ancho de la pagina se adapte a la pantalla del disp.-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Araths Baby Blog</title>
-
-    </head>
-
-    <body>
-        <?php echo "Hola mundo php"; ?>
-
-        <form action="procesar.php" method="post">
-        <p>Nombre: <input type="text" name="nombre" size="40"></p>
-        <p>Año de nacimiento: <input type="number" name="año" min="1900"></p>
-        
-        <p>Correo: <input type="text" name="correo" size="40"></p>
-        <p>Contraseña: <input type="text" name="contraseña" size="40"></p>
-        <p>Confirmar Contraseña: <input type="text" name="contraseña_confirm" size="40"></p>
-        <p>Sexo:
-        <input type="radio" name="sexo" value="h"> Hombre
-        <input type="radio" name="sexo" value="m"> Mujer
-        </p>
-        <p>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Borrar">
-        </p>
+        <link rel="stylesheet" href="styles.css">
+    <title>Formulario de Registro</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Usuario</h2>
+        <form action="registrar.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+            
+            <button type="submit">Registrarse</button>
         </form>
-
-    </body>
+    </div>
+</body>
 
 </html>
 
